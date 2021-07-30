@@ -4,6 +4,11 @@ exports.config = {
     Puppeteer: {
       url: 'http://localhost:4200',
       windowSize: '1200x900'
+    },
+    ResembleHelper: {
+      require: 'codeceptjs-resemblehelper',
+      baseFolder: './application-tests/references',
+      diffFolder: './application-tests/report/diff'
     }
   },
   include: {},
@@ -17,7 +22,7 @@ exports.config = {
   },
   plugins: {
     screenshotOnFail: {
-      enabled: true
+      enabled: false
     },
     pauseOnFail: {},
     retryFailedStep: {
